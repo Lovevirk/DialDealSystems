@@ -1,1 +1,73 @@
-i will have the code here
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Studiofinal
+{
+    public partial class merchantorcustomer : Form
+    {
+        public merchantorcustomer()
+        {
+            InitializeComponent();
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            
+                if (seller.Checked)
+                {
+                Merchant_Login merchantLoginform = new Merchant_Login();
+                    merchantLoginform.Show();
+                  Hide();
+
+                }
+                else if (buyer.Checked)
+                {
+                customer_Login customerlogin = new customer_Login();
+                customerlogin.Show();
+                Hide();
+                }
+            
+        }
+      
+        
+        private void merchantorcustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buyer_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(seller.Checked)
+            {
+                Merchant_Signup merchantSignform = new Merchant_Signup();
+                merchantSignform.Show();
+                Hide();
+            }
+            else if (buyer.Checked)
+            {
+                customer_Signup customersignform = new customer_Signup();   
+                customersignform.Show();
+                Hide();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+    }
+    
+    
